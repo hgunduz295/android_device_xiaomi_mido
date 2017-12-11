@@ -18,6 +18,7 @@ $(call inherit-product, device/xiaomi/mido/validus_mido.mk)
 
 # Inherit some common Validus stuff.
 $(call inherit-product, vendor/validus/config/common_full_phone.mk)
+$(call inherit-product, vendor/validus/config/caf_fw.mk)
 
 PRODUCT_NAME := validus_mido
 BOARD_VENDOR := Xiaomi

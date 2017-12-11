@@ -299,6 +299,7 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libcnefeatureconfig \
     libxml2
+    ims-ext-common
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
