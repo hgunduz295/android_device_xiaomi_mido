@@ -399,8 +399,8 @@
  
      <!-- Stop listening to the fingerprint reader when NON-WAKEUP proximity sensor is covered & screen is off.
           config_proximityCheckOnWake must be true. -->
-     <bool name="config_proximityCheckOnFingerprintWake">true</bool>
+     <!-- <bool name="config_proximityCheckOnFingerprintWake">true</bool> -->
      
      <!-- Wheter to enable doze always on -->
-     <bool name="config_enableDozeAlwaysOn">true</bool>
+     <!-- <bool name="config_enableDozeAlwaysOn">true</bool> -->
 </resources>
