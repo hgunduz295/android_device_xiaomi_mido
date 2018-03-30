@@ -205,6 +205,7 @@ TARGET_PER_MGR_ENABLED := true
 # Power
 TARGET_POWERHAL_VARIANT := qcom
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/enable_dt2w"
+TARGET_USES_INTERACTION_BOOST := true
 
 # Properties
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
@@ -216,6 +217,9 @@ TARGET_USE_SDCLANG := true
 
 # RIL
 TARGET_RIL_VARIANT := caf
+
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/recovery/fstab.qcom

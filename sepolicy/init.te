@@ -1,0 +1,5 @@
+allow init socket_device:sock_file rw_file_perms;
+allow init init:socket {ioctl create};
+allow init node:udp_socket node_bind;
+allow init property_socket:sock_file rw_file_perms;
+allow init hwservicemanager:binder {call transfer};

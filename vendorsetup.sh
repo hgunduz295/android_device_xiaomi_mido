@@ -21,3 +21,4 @@
 # function: add_lunch_combo generic-eng
 
 add_lunch_combo validus_mido-userdebug 
+add_lunch_combo validus_mido-user

@@ -303,8 +303,28 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libcnefeatureconfig \
     libxml2 \
-    ims-ext-common
+    rmnetcli \
+    datatop \
+    libprotobuf-cpp-full
+    
+# RCS
+PRODUCT_PACKAGES += \
+    rcs_service_aidl \
+    rcs_service_aidl.xml \
+    rcs_service_api \
+    rcs_service_api.xml
 
+# Telephony
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    telephony-ext \
+    com.android.ims.rcsmanager \
+    PresencePolling \
+    RcsService
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext    
+    
 # Seccomp policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:system/vendor/etc/seccomp_policy/mediacodec.policy
@@ -362,6 +382,31 @@ PRODUCT_COPY_FILES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-#Sound Recorder
+#Validus Stuff
 PRODUCT_PACKAGES += \
-    SoundRecorder
+    SoundRecorder \
+    BlockedNumberProvider 
+
+# facelock properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.facelock.black_timeout=700 \
+    ro.facelock.det_timeout=2500 \
+    ro.facelock.rec_timeout=3500 \
+    ro.facelock.est_max_time=600 \
+    persist.cne.feature=1 \
+    persist.data.iwlan.enable=true \
+    persist.radio.RATE_ADAPT_ENABLE=1 \
+    persist.radio.ROTATION_ENABLE=1 \
+    persist.radio.VT_ENABLE=1 \
+    persist.radio.VT_HYBRID_ENABLE=1 \
+    persist.radio.apm_sim_not_pwdn=1 \
+    persist.radio.custom_ecc=1 \
+    persist.radio.data_ltd_sys_ind=1 \
+    persist.radio.is_wps_enabled=true \
+    persist.radio.videopause.mode=1 \
+    persist.radio.sap_silent_pin=1 \
+    persist.radio.sib16_support=1 \
+    persist.radio.data_con_rprt=true \
+    persist.radio.always_send_plmn=true \
+    persist.rcs.supported=1 
+    
